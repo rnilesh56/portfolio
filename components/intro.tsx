@@ -1,19 +1,20 @@
 "use client";
 
-import React, { useEffect } from "react";
 import Image from "next/image";
-import mypic from "../public/mypic.jpg";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import mypic from "../public/mypic.jpg"
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-function intro() {
+export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
     <section
       ref={ref}
@@ -32,10 +33,10 @@ function intro() {
           >
             <Image
               src={mypic}
-              alt="Nilesh Picture"
+              alt="Nilesh Potrait"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem]  border-white shadow-xl"
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
             />
           </motion.div>
 
@@ -60,10 +61,11 @@ function intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Nilesh</span> I'm a{" "}
-        <span className="font-bold">frontend delveloper</span>. I enjoy building{" "}
-        <span className="italic">sites</span>. My focus is{" "}
-        <span className="underline">React (Next.js)</span>
+        <span className="font-bold">Hello, I'm Ricardo.</span> I'm a{" "}
+        <span className="font-bold">full-stack developer</span> with{" "}
+        <span className="font-bold">8 years</span> of experience. I enjoy
+        building <span className="italic">sites & apps</span>. My focus is{" "}
+        <span className="underline">React (Next.js)</span>.
       </motion.h1>
 
       <motion.div
@@ -82,7 +84,7 @@ function intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here
+          Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
@@ -114,5 +116,3 @@ function intro() {
     </section>
   );
 }
-
-export default intro;
