@@ -20,9 +20,9 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
 
       <p className="mb-3">
-        I graduating with a degree in{" "}
-        <span className="font-medium">Bachelor of Technology</span>, in Computer
-        Science Engineering passion from <span className="font-medium">Dev Bhoomi Group Of Institution</span> Dehradun, Uttrakhand. I learned{" "}
+        I graduated with a degree in{" "}
+        <span className="font-medium">Bachelor of Technology</span>, with Computer
+        Science Engineering from <span className="font-medium">Dev Bhoomi Group Of Institution</span> Dehradun, Uttrakhand. I learned{" "}
         <span className="font-medium">frontend web development</span>.{" "}
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. I <span className="underline">love</span> the
